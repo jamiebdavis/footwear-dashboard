@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
 import './App.css';
+import Pagination from "./components/Pagination";
+import Posts from "./components/Posts";
 
-function App() {
+const mockData = [
+    {
+        'id': '5e29973c89d246ee44fbee2c',
+        'productName': 'Adidas Ultra Boost',
+        'category': 'Men',
+        'size': 11,
+        'colour': 'Black',
+        'status': 'Out of Stock',
+        'customerInitials': 'LM'
+    }
+];
+
+
+// Replace divs with react fragments
+
+const App = () => {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState([]);
+  const [postsPerPage, setPostsPerPage] = useState([4]);
+
+
+  useEffect(() => {
+    setPosts(mockData);
+  }, []);
+
+  //  Get currents posts
+  const indexOfLastPost = currentPage + postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+  //Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+      <div className="container mt-5">
+        <h1>form</h1>
+        <Posts posts={currentPosts} loading={loading}/>
+        <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate}/>
+      </div>
+  )
+};
 
 export default App;
