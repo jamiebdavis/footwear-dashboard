@@ -1,0 +1,58 @@
+.nav {
+    text-align: right;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    margin-bottom: 50px;
+}
+
+.navItem {
+    display: inline;
+    list-style: none;
+    margin-right: 20px;
+}
+
+.readyToTry {
+    background-color: #28dec9;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid white;
+}
+
+.onTheWay {
+    background-color: #66c0ed;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid white;
+    left: 20px;
+}
+
+.inTheQueue {
+    background-color: #e07a14;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid white;
+}
+
+.outOfStock {
+    background-color: #c92f1e;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid white;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid white;
+}
