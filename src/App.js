@@ -2,18 +2,9 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Pagination from "./components/Pagination";
 import Posts from "./components/Posts";
+import MOCK_DATA from "./data/data";
 
-const mockData = [
-    {
-        'id': '5e29973c89d246ee44fbee2c',
-        'productName': 'Adidas Ultra Boost',
-        'category': 'Men',
-        'size': 11,
-        'colour': 'Black',
-        'status': 'Out of Stock',
-        'customerInitials': 'LM'
-    }
-];
+
 
 
 // Replace divs with react fragments
@@ -26,7 +17,7 @@ const App = () => {
 
 
   useEffect(() => {
-    setPosts(mockData);
+    setPosts(MOCK_DATA);
   }, []);
 
   //  Get currents posts
