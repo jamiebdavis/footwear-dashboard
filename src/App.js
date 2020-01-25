@@ -3,10 +3,10 @@ import './App.css';
 import Pagination from "./components/Pagination";
 import Posts from "./components/Posts";
 import MOCK_DATA from "./data/data";
-import Dot from "./components/dot/dot";
-import Nav from "./components/nav/nav";
-import Container from "./container/container";
-import PageCount from "./components/nav/PageCount/PageCount";
+import Dot from "./components/UI/dot/dot";
+import Navigation from "./components/Navigation/Navigation";
+import Container from "./components/Container/Container";
+import PageCount from "./components/Navigation/PageCount/PageCount";
 import Post from "./components/Post";
 
 
@@ -46,7 +46,7 @@ const App = () => {
 
     return (
         <div className="container mt-5">
-            <Nav/>
+            <Navigation/>
             {postList}
             {/*<Posts posts={currentPosts} loading={loading}/>*/}
             {/*<Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate}/>*/}

@@ -1,8 +1,8 @@
 import React from 'react';
-import classes from "./Nav.module.css"
-import Dot from "../dot/dot";
+import classes from "./Navigation.module.css"
+import Dot from "../UI/dot/dot";
 
-const Nav = () => {
+const Navigation = () => {
     return (
         <div>
             <ul className={classes.nav}>
@@ -15,4 +15,4 @@ const Nav = () => {
     );
 };
 
-export default Nav;
+export default Navigation;

@@ -1,0 +1,12 @@
+.initials {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border: 3px solid white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    font-weight: 900;
+    font-size: 2rem;
+}

@@ -5,7 +5,11 @@ const MOCK_DATA = [
         "category": "Men",
         "size": 11,
         "colour": "Black",
-        "status": "Out of Stock",
+        "status": {
+            "id": "3",
+            "colour": "#c92f1e",
+            "description": "Out of Stock",
+        },
         "customerInitials": "LM"
     },
     {
@@ -14,7 +18,11 @@ const MOCK_DATA = [
         "category": "Men",
         "size": 7,
         "colour": "White",
-        "status": "Out of Stock",
+        "status": {
+            "id": "3",
+            "colour": "#c92f1e",
+            "description": "Out of Stock",
+        },
         "customerInitials": "DC"
     },
     {
@@ -23,7 +31,11 @@ const MOCK_DATA = [
         "category": "Women",
         "size": 6,
         "colour": "Blue",
-        "status": "On the way",
+        "status": {
+            "id": "1",
+            "colour": "#66c0ed",
+            "description": "On the way",
+        },
         "customerInitials": "DH"
     },
     {
@@ -32,7 +44,11 @@ const MOCK_DATA = [
         "category": "Junior",
         "size": 1,
         "colour": "Blue",
-        "status": "On the way",
+        "status": {
+            "id": "1",
+            "colour": "#66c0ed",
+            "description": "On the way",
+        },
         "customerInitials": "LR"
     },
     {
@@ -41,7 +57,11 @@ const MOCK_DATA = [
         "category": "Women",
         "size": 5,
         "colour": "Pink",
-        "status": "On the way",
+        "status": {
+            "id": "1",
+            "colour": "#66c0ed",
+            "description": "On the way",
+        },
         "customerInitials": "AW"
     },
     {
@@ -50,7 +70,11 @@ const MOCK_DATA = [
         "category": "Men",
         "size": 2,
         "colour": "Pink",
-        "status": "Ready to try",
+        "status": {
+            "id": "0",
+            "colour": "#28dec9",
+            "description": "Ready to try",
+        },
         "customerInitials": "NS"
     },
     {
@@ -59,7 +83,11 @@ const MOCK_DATA = [
         "category": "Junior",
         "size": 2,
         "colour": "White",
-        "status": "On the way",
+        "status": {
+            "id": "1",
+            "colour": "#66c0ed",
+            "description": "On the way",
+        },
         "customerInitials": "LS"
     },
     {
@@ -68,7 +96,11 @@ const MOCK_DATA = [
         "category": "Junior",
         "size": 1,
         "colour": "Black",
-        "status": "In the queue",
+        "status": {
+            "id": "2",
+            "colour": "#e07a14",
+            "description": "In the queue",
+        },
         "customerInitials": "CV"
     },
     {
@@ -77,7 +109,11 @@ const MOCK_DATA = [
         "category": "Women",
         "size": 10,
         "colour": "Orange",
-        "status": "Ready to try",
+        "status": {
+            "id": "0",
+            "colour": "#28dec9",
+            "description": "Ready to try",
+        },
         "customerInitials": "HG"
     },
     {
@@ -86,7 +122,11 @@ const MOCK_DATA = [
         "category": "Men",
         "size": 1,
         "colour": "White",
-        "status": "Ready to try",
+        "status": {
+            "id": "0",
+            "colour": "#28dec9",
+            "description": "Ready to try",
+        },
         "customerInitials": "IK"
     },
     {
@@ -95,7 +135,11 @@ const MOCK_DATA = [
         "category": "Men",
         "size": 8,
         "colour": "Orange",
-        "status": "In the queue",
+        "status": {
+            "id": "2",
+            "colour": "#e07a14",
+            "description": "In the queue",
+        },
         "customerInitials": "RM"
     },
     {
@@ -104,7 +148,11 @@ const MOCK_DATA = [
         "category": "Men",
         "size": 1,
         "colour": "Blue",
-        "status": "In the queue",
+        "status": {
+            "id": "2",
+            "colour": "#e07a14",
+            "description": "In the queue",
+        },
         "customerInitials": "WD"
     },
     {
@@ -113,7 +161,11 @@ const MOCK_DATA = [
         "category": "Men",
         "size": 1,
         "colour": "Black",
-        "status": "Out of Stock",
+        "status": {
+            "id": "3",
+            "colour": "#c92f1e",
+            "description": "Out of Stock",
+        },
         "customerInitials": "JC"
     },
     {
@@ -122,7 +174,11 @@ const MOCK_DATA = [
         "category": "Women",
         "size": 9,
         "colour": "White",
-        "status": "Out of Stock",
+        "status": {
+            "id": "3",
+            "colour": "#c92f1e",
+            "description": "Out of Stock",
+        },
         "customerInitials": "KF"
     },
     {
@@ -131,7 +187,11 @@ const MOCK_DATA = [
         "category": "Women",
         "size": 9,
         "colour": "Black",
-        "status": "Ready to try",
+        "status": {
+            "id": "0",
+            "colour": "#28dec9",
+            "description": "Ready to try",
+        },
         "customerInitials": "HH"
     },
     {
@@ -140,7 +200,11 @@ const MOCK_DATA = [
         "category": "Men",
         "size": 3,
         "colour": "Black",
-        "status": "Ready to try",
+        "status": {
+            "id": "0",
+            "colour": "#28dec9",
+            "description": "Ready to try",
+        },
         "customerInitials": "ES"
     },
     {
@@ -149,7 +213,11 @@ const MOCK_DATA = [
         "category": "Junior",
         "size": 1,
         "colour": "Blue",
-        "status": "On the way",
+        "status": {
+            "id": "1",
+            "colour": "#66c0ed",
+            "description": "On the way",
+        },
         "customerInitials": "WW"
     },
     {
@@ -158,7 +226,11 @@ const MOCK_DATA = [
         "category": "Women",
         "size": 7,
         "colour": "Black",
-        "status": "In the queue",
+        "status": {
+            "id": "2",
+            "colour": "#e07a14",
+            "description": "In the queue",
+        },
         "customerInitials": "BS"
     },
     {
@@ -167,7 +239,11 @@ const MOCK_DATA = [
         "category": "Junior",
         "size": 7,
         "colour": "White",
-        "status": "On the way",
+        "status": {
+            "id": "1",
+            "colour": "#66c0ed",
+            "description": "On the way",
+        },
         "customerInitials": "GF"
     },
     {
@@ -176,7 +252,11 @@ const MOCK_DATA = [
         "category": "Junior",
         "size": 11,
         "colour": "Blue",
-        "status": "In the queue",
+        "status": {
+            "id": "2",
+            "colour": "#e07a14",
+            "description": "In the queue",
+        },
         "customerInitials": "FG"
     },
     {
@@ -185,7 +265,11 @@ const MOCK_DATA = [
         "category": "Women",
         "size": 2,
         "colour": "Blue",
-        "status": "In the queue",
+        "status": {
+            "id": "2",
+            "colour": "#e07a14",
+            "description": "In the queue",
+        },
         "customerInitials": "PJ"
     },
     {
@@ -194,7 +278,11 @@ const MOCK_DATA = [
         "category": "Junior",
         "size": 7,
         "colour": "Blue",
-        "status": "On the way",
+        "status": {
+            "id": "1",
+            "colour": "#66c0ed",
+            "description": "On the way",
+        },
         "customerInitials": "CD"
     },
     {
@@ -203,7 +291,11 @@ const MOCK_DATA = [
         "category": "Junior",
         "size": 3,
         "colour": "White",
-        "status": "Ready to try",
+        "status": {
+            "id": "0",
+            "colour": "#28dec9",
+            "description": "Ready to try",
+        },
         "customerInitials": "LR"
     },
     {
@@ -212,7 +304,11 @@ const MOCK_DATA = [
         "category": "Women",
         "size": 3,
         "colour": "Blue",
-        "status": "In the queue",
+        "status": {
+            "id": "2",
+            "colour": "#e07a14",
+            "description": "In the queue",
+        },
         "customerInitials": "CB"
     }
 ];
