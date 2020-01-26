@@ -1,15 +1,30 @@
 import React from 'react';
 import classes from "./Navigation.module.css"
 import Dot from "../UI/dot/dot";
+import NavigationItem from "./NavigationItem/NavigationItem";
+import {CUSTOMER_STATUS_TYPES, COLOUR_LIST, STATUS_COUNT} from './consts'
 
-const Navigation = () => {
+//use value
+
+const Navigation = (props) => {
+    const elements = [];
+
+    const clearFilterElement = <li onClick={props.clearFilter}>clear filter</li>
+
+    for (let i = 0; i < STATUS_COUNT; i++) {
+        elements.push(<NavigationItem
+                key={i}
+                value={i}
+                filterPosts={props.filterPosts}
+                filter={props.filter}
+            />
+        )
+    }
+
     return (
         <div>
             <ul className={classes.nav}>
-                <li className={classes.navItem}><span className={classes.readyToTry}></span> Ready to try</li>
-                <li className={classes.navItem}><span className={classes.onTheWay}></span> On the way</li>
-                <li className={classes.navItem}><span className={classes.inTheQueue}></span> In the queue</li>
-                <li className={classes.navItem}><span className={classes.outOfStock}></span> Out of stock</li>
+                {props.filter ? clearFilterElement : elements}
             </ul>
         </div>
     );

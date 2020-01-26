@@ -6,7 +6,7 @@ const MOCK_DATA = [
         "size": 11,
         "colour": "Black",
         "status": {
-            "id": "3",
+            "id": 3,
             "colour": "#c92f1e",
             "description": "Out of Stock",
         },
@@ -19,7 +19,7 @@ const MOCK_DATA = [
         "size": 7,
         "colour": "White",
         "status": {
-            "id": "3",
+            "id": 3,
             "colour": "#c92f1e",
             "description": "Out of Stock",
         },
@@ -32,7 +32,7 @@ const MOCK_DATA = [
         "size": 6,
         "colour": "Blue",
         "status": {
-            "id": "1",
+            "id": 1,
             "colour": "#66c0ed",
             "description": "On the way",
         },
@@ -45,7 +45,7 @@ const MOCK_DATA = [
         "size": 1,
         "colour": "Blue",
         "status": {
-            "id": "1",
+            "id": 1,
             "colour": "#66c0ed",
             "description": "On the way",
         },
@@ -58,7 +58,7 @@ const MOCK_DATA = [
         "size": 5,
         "colour": "Pink",
         "status": {
-            "id": "1",
+            "id": 1,
             "colour": "#66c0ed",
             "description": "On the way",
         },
@@ -71,7 +71,7 @@ const MOCK_DATA = [
         "size": 2,
         "colour": "Pink",
         "status": {
-            "id": "0",
+            "id": 0,
             "colour": "#28dec9",
             "description": "Ready to try",
         },
@@ -84,7 +84,7 @@ const MOCK_DATA = [
         "size": 2,
         "colour": "White",
         "status": {
-            "id": "1",
+            "id": 1,
             "colour": "#66c0ed",
             "description": "On the way",
         },
@@ -97,7 +97,7 @@ const MOCK_DATA = [
         "size": 1,
         "colour": "Black",
         "status": {
-            "id": "2",
+            "id": 2,
             "colour": "#e07a14",
             "description": "In the queue",
         },
@@ -110,7 +110,7 @@ const MOCK_DATA = [
         "size": 10,
         "colour": "Orange",
         "status": {
-            "id": "0",
+            "id": 0,
             "colour": "#28dec9",
             "description": "Ready to try",
         },
@@ -123,7 +123,7 @@ const MOCK_DATA = [
         "size": 1,
         "colour": "White",
         "status": {
-            "id": "0",
+            "id": 0,
             "colour": "#28dec9",
             "description": "Ready to try",
         },
@@ -136,7 +136,7 @@ const MOCK_DATA = [
         "size": 8,
         "colour": "Orange",
         "status": {
-            "id": "2",
+            "id": 2,
             "colour": "#e07a14",
             "description": "In the queue",
         },
@@ -149,7 +149,7 @@ const MOCK_DATA = [
         "size": 1,
         "colour": "Blue",
         "status": {
-            "id": "2",
+            "id": 2,
             "colour": "#e07a14",
             "description": "In the queue",
         },
@@ -162,7 +162,7 @@ const MOCK_DATA = [
         "size": 1,
         "colour": "Black",
         "status": {
-            "id": "3",
+            "id": 3,
             "colour": "#c92f1e",
             "description": "Out of Stock",
         },
@@ -175,7 +175,7 @@ const MOCK_DATA = [
         "size": 9,
         "colour": "White",
         "status": {
-            "id": "3",
+            "id": 3,
             "colour": "#c92f1e",
             "description": "Out of Stock",
         },
@@ -188,7 +188,7 @@ const MOCK_DATA = [
         "size": 9,
         "colour": "Black",
         "status": {
-            "id": "0",
+            "id": 0,
             "colour": "#28dec9",
             "description": "Ready to try",
         },
@@ -201,7 +201,7 @@ const MOCK_DATA = [
         "size": 3,
         "colour": "Black",
         "status": {
-            "id": "0",
+            "id": 0,
             "colour": "#28dec9",
             "description": "Ready to try",
         },
@@ -214,7 +214,7 @@ const MOCK_DATA = [
         "size": 1,
         "colour": "Blue",
         "status": {
-            "id": "1",
+            "id": 1,
             "colour": "#66c0ed",
             "description": "On the way",
         },
@@ -227,7 +227,7 @@ const MOCK_DATA = [
         "size": 7,
         "colour": "Black",
         "status": {
-            "id": "2",
+            "id": 2,
             "colour": "#e07a14",
             "description": "In the queue",
         },
@@ -240,7 +240,7 @@ const MOCK_DATA = [
         "size": 7,
         "colour": "White",
         "status": {
-            "id": "1",
+            "id": 1,
             "colour": "#66c0ed",
             "description": "On the way",
         },
@@ -253,7 +253,7 @@ const MOCK_DATA = [
         "size": 11,
         "colour": "Blue",
         "status": {
-            "id": "2",
+            "id": 2,
             "colour": "#e07a14",
             "description": "In the queue",
         },
@@ -266,7 +266,7 @@ const MOCK_DATA = [
         "size": 2,
         "colour": "Blue",
         "status": {
-            "id": "2",
+            "id": 2,
             "colour": "#e07a14",
             "description": "In the queue",
         },
@@ -279,7 +279,7 @@ const MOCK_DATA = [
         "size": 7,
         "colour": "Blue",
         "status": {
-            "id": "1",
+            "id": 1,
             "colour": "#66c0ed",
             "description": "On the way",
         },
@@ -292,7 +292,7 @@ const MOCK_DATA = [
         "size": 3,
         "colour": "White",
         "status": {
-            "id": "0",
+            "id": 0,
             "colour": "#28dec9",
             "description": "Ready to try",
         },
@@ -305,7 +305,7 @@ const MOCK_DATA = [
         "size": 3,
         "colour": "Blue",
         "status": {
-            "id": "2",
+            "id": 2,
             "colour": "#e07a14",
             "description": "In the queue",
         },

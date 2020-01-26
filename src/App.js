@@ -14,42 +14,80 @@ import Post from "./components/Post";
 
 const App = () => {
     const [posts, setPosts] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [currentPage, setCurrentPage] = useState([]);
-    const [postsPerPage, setPostsPerPage] = useState([4]);
+    const [filter, setFilter] = useState(false);
+    const [filteredPosts, setFilteredPosts] = useState([]);
 
 
     useEffect(() => {
         setPosts(MOCK_DATA);
     }, []);
 
-    //  Get currents posts
-    const indexOfLastPost = currentPage + postsPerPage;
-    const indexOfFirstPost = indexOfLastPost - postsPerPage;
-    const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
-    //Change page
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+    /**
+     * Remove post from screen when clicked
+     *
+     * @param {String} id Post ID.
+     */
+    const deletePost = (id) => {
+        const postsArr = posts.filter((post) => post.id !== id);
+        const filteredPostsArr = filteredPosts.filter((post) => post.id !== id);
+
+        setPosts(postsArr);
+        setFilteredPosts(filteredPostsArr);
+    };
+
+    const filterPosts = (status) => {
+        const postsArr = posts.filter((post) => post.status.id === status);
+        setFilter(true);
+        setFilteredPosts(postsArr);
+        console.log(filteredPosts)
+
+    };
+
+    const clearFilter = () => {
+        setFilter(false);
+    };
 
     const postList = posts.map(post => {
         return (
-            <Container key={post.id}
-                productName={post.productName}
-                category={post.category}
-                size={post.size}
-                colour={post.colour}
-                status={post.status}
-                customerInitials={post.customerInitials}
-            />
+            <div onClick={() => deletePost(post.id)}>
+                <Container
+                    key={post.id}
+                    productName={post.productName}
+                    category={post.category}
+                    size={post.size}
+                    colour={post.colour}
+                    status={post.status}
+                    customerInitials={post.customerInitials}
+                />
+            </div>
         )
-    })
+    });
+
+    const filteredPostList = filteredPosts.map(post => {
+        return (
+            <div onClick={() => deletePost(post.id)}>
+                <Container
+                    key={post.id}
+                    productName={post.productName}
+                    category={post.category}
+                    size={post.size}
+                    colour={post.colour}
+                    status={post.status}
+                    customerInitials={post.customerInitials}
+                />
+            </div>
+        )
+    });
 
     return (
         <div className="container mt-5">
-            <Navigation/>
-            {postList}
-            {/*<Posts posts={currentPosts} loading={loading}/>*/}
-            {/*<Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate}/>*/}
+            <Navigation
+                filterPosts={filterPosts}
+                filter={filter}
+                clearFilter={clearFilter}/>
+            {filter ? filteredPostList : postList}
             <PageCount/>
         </div>
     )

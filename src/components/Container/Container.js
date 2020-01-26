@@ -11,7 +11,7 @@ import ProductCategory from "../ProductInformation/ProductCategory/ProductCatego
 const Container = (props) => {
     return (
         <React.Fragment>
-            <div className={classes.flexContainer}>
+            <div className={classes.flexContainer} >
                 <Tab status={props.status}/>
                 <div className="container">
                     <div className="row">
