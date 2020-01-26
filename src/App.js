@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import Pagination from "./components/Pagination";
+import Pagination from "./components/Navigation/Pagination/Pagination";
 import Posts from "./components/Posts";
 import MOCK_DATA from "./data/data";
 import Dot from "./components/UI/dot/dot";
@@ -8,6 +8,7 @@ import Navigation from "./components/Navigation/Navigation";
 import Container from "./components/Container/Container";
 import PageCount from "./components/Navigation/PageCount/PageCount";
 import Post from "./components/Post";
+import Slider from "./components/Navigation/Slider/Slider";
 
 
 // Replace divs with react fragments
@@ -16,8 +17,8 @@ const App = () => {
     const [posts, setPosts] = useState([]);
     const [filter, setFilter] = useState(false);
     const [filteredPosts, setFilteredPosts] = useState([]);
-    const [currentPage, setCurrentPage] = useState([]);
     const [postsPerPage, setPostsPerPage] = useState(4);
+    const [currentPage, setCurrentPage] = useState(0);
 
 
 
@@ -47,8 +48,6 @@ const App = () => {
         const postsArr = posts.filter((post) => post.status.id === status);
         setFilter(true);
         setFilteredPosts(postsArr);
-        console.log(filteredPosts)
-
     };
 
     const clearFilter = () => {
@@ -94,17 +93,22 @@ const App = () => {
 
     return (
         <div className="container mt-2">
+            {/*<Slider/>*/}
             <Navigation
                 filterPosts={filterPosts}
                 filter={filter}
                 clearFilter={clearFilter}/>
+
             {filter ? filteredPostList : postList}
-            <PageCount/>
+
+
             <Pagination
                 postsPerPage={postsPerPage}
                 totalPosts={filter ? filteredPosts.length : posts.length}
                 paginate={paginate}
+                currentPage={currentPage}
             />
+
 
         </div>
     )

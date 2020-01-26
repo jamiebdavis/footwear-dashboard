@@ -1,5 +1,13 @@
 .pageCount {
     color: white;
     font-weight: bold;
-    text-align: right;
+    position: fixed;
+    top: 91%;
+    left: 85%;
 }
+
+.TotalPages {
+    color: #989898;
+    font-size: medium;
+}
+
