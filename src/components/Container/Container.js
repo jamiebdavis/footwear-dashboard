@@ -16,7 +16,7 @@ const Container = (props) => {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm">
-                            <ProductImage/>
+                            <ProductImage src={props.src}/>
                         </div>
                         <div className="col-sm">
                             <ProductName name={props.productName}/>

@@ -1,11 +1,11 @@
 import React from 'react';
 import classes from "./ProductImage.module.css"
 
-const ProductImage = () => {
+const ProductImage = ({src}) => {
     return (
         <div>
             <img className={classes.Image}
-                 src="https://i8.amplience.net/i/jpl/jd_341585_a?qlt=92&amp;w=750&amp;h=531&amp;v=1"
+                 src={src}
                  alt="footwear"
             />
         </div>

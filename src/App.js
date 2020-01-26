@@ -69,6 +69,7 @@ const App = () => {
                     colour={post.colour}
                     status={post.status}
                     customerInitials={post.customerInitials}
+                    src={post.src}
                 />
             </div>
         )
@@ -85,6 +86,7 @@ const App = () => {
                     colour={post.colour}
                     status={post.status}
                     customerInitials={post.customerInitials}
+                    src={post.src}
                 />
             </div>
         )
