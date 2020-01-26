@@ -8,7 +8,7 @@ const Pagination = ({postsPerPage, totalPosts, paginate}) => {
     }
     return (
         <nav>
-            <ul className="pagination">
+            <ul className="carousel-indicators">
                 {pageNumbers.map(number => (
                     <li key={number} className="page-item">
                         <a href="!#" className="page-link" onClick={() => paginate(number)}>
