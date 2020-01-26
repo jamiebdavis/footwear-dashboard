@@ -1,15 +1,12 @@
 import React from 'react';
 import classes from "./Navigation.module.css"
-import Dot from "../UI/dot/dot";
 import NavigationItem from "./NavigationItem/NavigationItem";
-import {CUSTOMER_STATUS_TYPES, COLOUR_LIST, STATUS_COUNT} from './consts'
-
-//use value
+import {STATUS_COUNT} from './consts'
 
 const Navigation = (props) => {
     const elements = [];
 
-    const clearFilterElement = <li onClick={props.clearFilter}>clear filter</li>
+    const clearFilterElement = <li className={classes.clearFilter} onClick={props.clearFilter}>clear filter</li>
 
     for (let i = 0; i < STATUS_COUNT; i++) {
         elements.push(<NavigationItem

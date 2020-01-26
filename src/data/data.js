@@ -29,6 +29,34 @@ const MOCK_DATA = [
         "src": "https://i8.amplience.net/i/jpl/jd_058318_a?qlt=92&amp;w=750&amp;h=531&amp;v=1"
     },
     {
+        "id": "5e29973cc0b784e7cdad495a",
+        "productName": "Nike Air Vapor Max",
+        "category": "Men",
+        "size": 2,
+        "colour": "Pink",
+        "status": {
+            "id": 0,
+            "colour": "#28dec9",
+            "description": "Ready to try",
+        },
+        "customerInitials": "NS",
+        "src": "https://i8.amplience.net/i/jpl/jd_131390_a?qlt=92&amp;w=750&amp;h=531&amp;v=1"
+    },
+    {
+        "id": "5e29973cba45674048f59a44",
+        "productName": "Air Jordan 1",
+        "category": "Junior",
+        "size": 7,
+        "colour": "White",
+        "status": {
+            "id": 1,
+            "colour": "#66c0ed",
+            "description": "On the way",
+        },
+        "customerInitials": "GF",
+        "src": "https://i8.amplience.net/i/jpl/jd_341729_a?qlt=92&amp;w=750&amp;h=531&amp;v=1"
+    },
+    {
         "id": "5e29973cf378d0afbf020b2f",
         "productName": "Vans Old School",
         "category": "Women",
@@ -69,20 +97,6 @@ const MOCK_DATA = [
         },
         "customerInitials": "AW",
         "src": "https://i8.amplience.net/i/jpl/jd_341973_a?qlt=92&amp;w=750&amp;h=531&amp;v=1"
-    },
-    {
-        "id": "5e29973cc0b784e7cdad495a",
-        "productName": "Nike Air Vapor Max",
-        "category": "Men",
-        "size": 2,
-        "colour": "Pink",
-        "status": {
-            "id": 0,
-            "colour": "#28dec9",
-            "description": "Ready to try",
-        },
-        "customerInitials": "NS",
-        "src": "https://i8.amplience.net/i/jpl/jd_131390_a?qlt=92&amp;w=750&amp;h=531&amp;v=1"
     },
     {
         "id": "5e29973c79d03030099b2df3",
@@ -251,20 +265,6 @@ const MOCK_DATA = [
         },
         "customerInitials": "BS",
         "src": "https://i8.amplience.net/i/jpl/jd_341973_a?qlt=92&amp;w=750&amp;h=531&amp;v=1"
-    },
-    {
-        "id": "5e29973cba45674048f59a44",
-        "productName": "Air Jordan 1",
-        "category": "Junior",
-        "size": 7,
-        "colour": "White",
-        "status": {
-            "id": 1,
-            "colour": "#66c0ed",
-            "description": "On the way",
-        },
-        "customerInitials": "GF",
-        "src": "https://i8.amplience.net/i/jpl/jd_341729_a?qlt=92&amp;w=750&amp;h=531&amp;v=1"
     },
     {
         "id": "5e29973c3b2477573edcc65c",

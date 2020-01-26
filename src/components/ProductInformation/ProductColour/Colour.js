@@ -4,8 +4,7 @@ import classes from "./Colour.module.css"
 const ItemColour = (props) => {
     return (
         <div className={classes.ItemColour}>
-            <p>Colour:</p>
-            <p>{props.colour}</p>
+            <p>Colour:<br />{props.colour}</p>
         </div>
     );
 };

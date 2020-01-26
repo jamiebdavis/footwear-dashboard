@@ -60,3 +60,8 @@
     display: inline-block;
     border: 2px solid white;
 }
+
+.clearFilter {
+    list-style-type: none;
+    cursor: pointer;
+}

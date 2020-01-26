@@ -5,9 +5,19 @@
     margin-bottom: 20px;
     height: 18vh;
     border-radius: 10px;
-    border: 2px solid #989898;
+    border: 1px solid #989898;
     font-weight: bold;
     font-family: 'Work Sans', sans-serif;
+    padding-left: 15px;
+}
+
+.flexContainer:hover {
+    /*box-shadow: 0 0 8px rgba(255,255,255, 0.6);*/
+}
+
+.flexContainer:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 .flexContainer > .item {

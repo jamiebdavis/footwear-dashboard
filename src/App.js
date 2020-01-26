@@ -92,12 +92,14 @@ const App = () => {
     });
 
     return (
-        <div className="container mt-2">
+        <div className="container mt-2" style={{minWidth: "800px"}}>
             {/*<Slider/>*/}
             <Navigation
                 filterPosts={filterPosts}
                 filter={filter}
                 clearFilter={clearFilter}/>
+
+            {/*    work on no more posts*/}
 
             {filter ? filteredPostList : postList}
 

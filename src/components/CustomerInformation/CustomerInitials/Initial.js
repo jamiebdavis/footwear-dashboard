@@ -4,7 +4,7 @@ import classes from "./Initials.module.css"
 const Initials = (props) => {
     return (
         <div className={classes.initials}>
-            <p>{props.initials}</p>
+            {props.initials}
         </div>
     );
 };

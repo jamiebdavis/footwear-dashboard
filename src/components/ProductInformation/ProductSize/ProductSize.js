@@ -4,8 +4,7 @@ import classes from "./ProductSize.module.css";
 const ProductSize = (props) => {
     return (
         <div className={classes.Size}>
-            <p>Size:</p>
-            <p>{props.size}</p>
+            <p>Size:<br />{props.size}</p>
         </div>
     );
 };

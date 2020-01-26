@@ -1,3 +1,5 @@
 .Size {
     color: #989898;
+    position: relative;
+    top: 25px;
 }
