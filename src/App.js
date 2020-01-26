@@ -16,13 +16,19 @@ const App = () => {
     const [posts, setPosts] = useState([]);
     const [filter, setFilter] = useState(false);
     const [filteredPosts, setFilteredPosts] = useState([]);
+    const [currentPage, setCurrentPage] = useState([]);
+    const [postsPerPage, setPostsPerPage] = useState(4);
+
+
 
 
     useEffect(() => {
         setPosts(MOCK_DATA);
     }, []);
 
-
+    //  Get currents posts
+    const indexOfLastPost = currentPage + postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
 
     /**
      * Remove post from screen when clicked
@@ -49,7 +55,10 @@ const App = () => {
         setFilter(false);
     };
 
-    const postList = posts.map(post => {
+    //Change page
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+    const postList = posts.slice(indexOfFirstPost, indexOfLastPost).map(post => {
         return (
             <div onClick={() => deletePost(post.id)}>
                 <Container
@@ -65,7 +74,7 @@ const App = () => {
         )
     });
 
-    const filteredPostList = filteredPosts.map(post => {
+    const filteredPostList = filteredPosts.slice(indexOfFirstPost, indexOfLastPost).map(post => {
         return (
             <div onClick={() => deletePost(post.id)}>
                 <Container
@@ -82,13 +91,19 @@ const App = () => {
     });
 
     return (
-        <div className="container mt-5">
+        <div className="container mt-2">
             <Navigation
                 filterPosts={filterPosts}
                 filter={filter}
                 clearFilter={clearFilter}/>
             {filter ? filteredPostList : postList}
             <PageCount/>
+            <Pagination
+                postsPerPage={postsPerPage}
+                totalPosts={filter ? filteredPosts.length : posts.length}
+                paginate={paginate}
+            />
+
         </div>
     )
 };
