@@ -19,11 +19,11 @@ const Navigation = (props) => {
     }
 
     return (
-        <div>
+        <>
             <ul className={classes.nav}>
                 {props.filter ? clearFilterElement : elements}
             </ul>
-        </div>
+        </>
     );
 };
 
