@@ -11,7 +11,7 @@ import {COLOUR_LIST} from '../../components/Navigation/consts'
 
 const Container = (props) => {
     return (
-        <React.Fragment>
+        <>
             <div className={classes.flexContainer} style={{borderLeft: `20px solid ${COLOUR_LIST[props.status.id]}`}} >
                 <div className="container">
                     <div className="row">
@@ -39,7 +39,7 @@ const Container = (props) => {
                     </div>
                 </div>
             </div>
-        </React.Fragment>
+        </>
     );
 };
 

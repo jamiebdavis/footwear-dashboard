@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from "./PageCount.module.css"
 
-const PageCount = (props) => {
+const PageCount = ({currentPage, totalPages}) => {
     return (
         <div className={classes.pageCount}>
-            <h4>0{props.currentPage + 1}<span className={classes.TotalPages}> | 0{props.totalPages}</span> </h4>
+            <h4>0{currentPage + 1}<span className={classes.TotalPages}> | 0{totalPages}</span> </h4>
         </div>
     );
 };

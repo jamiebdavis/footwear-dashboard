@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from "./ProductSize.module.css";
 
-const ProductSize = (props) => {
+const ProductSize = ({size}) => {
     return (
         <div className={classes.Size}>
-            <p>Size:<br />{props.size}</p>
+            <p>Size:<br />{size}</p>
         </div>
     );
 };

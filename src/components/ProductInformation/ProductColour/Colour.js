@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from "./Colour.module.css"
 
-const ItemColour = (props) => {
+const ItemColour = ({colour}) => {
     return (
         <div className={classes.ItemColour}>
-            <p>Colour:<br />{props.colour}</p>
+            <p>Colour:<br />{colour}</p>
         </div>
     );
 };

@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from "./Initials.module.css"
 
-const Initials = (props) => {
+const Initials = ({initials}) => {
     return (
         <div className={classes.initials}>
-            {props.initials}
+            {initials}
         </div>
     );
 };

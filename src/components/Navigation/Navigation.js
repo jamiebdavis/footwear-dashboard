@@ -3,17 +3,17 @@ import classes from "./Navigation.module.css"
 import NavigationItem from "./NavigationItem/NavigationItem";
 import {STATUS_COUNT} from './consts'
 
-const Navigation = (props) => {
+const Navigation = ({clearFilter, filterPosts, filter}) => {
     const elements = [];
 
-    const clearFilterElement = <li className={classes.clearFilter} onClick={props.clearFilter}>clear filter</li>
+    const clearFilterElement = <li className={classes.clearFilter} onClick={clearFilter}>clear filter</li>
 
     for (let i = 0; i < STATUS_COUNT; i++) {
         elements.push(<NavigationItem
                 key={i}
                 value={i}
-                filterPosts={props.filterPosts}
-                filter={props.filter}
+                filterPosts={filterPosts}
+                filter={filter}
             />
         )
     }
@@ -21,7 +21,7 @@ const Navigation = (props) => {
     return (
         <>
             <ul className={classes.nav}>
-                {props.filter ? clearFilterElement : elements}
+                {filter ? clearFilterElement : elements}
             </ul>
         </>
     );
