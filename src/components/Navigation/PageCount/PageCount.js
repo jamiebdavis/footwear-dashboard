@@ -1,6 +1,14 @@
 import React from 'react';
 import classes from "./PageCount.module.css"
 
+/**
+ * Page count component.
+ *
+ * @param currentPage Current page user is on.
+ * @param totalPages Total number of pages.
+ *
+ * @return {React.Element} The rendered element.
+ */
 const PageCount = ({currentPage, totalPages}) => {
     return (
         <div className={classes.pageCount}>

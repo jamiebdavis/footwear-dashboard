@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from "./Container.module.css"
-import Initials from "../CustomerInformation/CustomerInitials/Initial";
-import ItemColour from "../ProductInformation/ProductColour/Colour";
+import CustomerInitials from "../CustomerInformation/CustomerInitials/CustomerInitial";
+import ProductColour from "../ProductInformation/ProductColour/ProductColour";
 import ProductName from "../ProductInformation/ProductName/ProductName";
 import ProductImage from "../ProductInformation/ProductImage/ProductImage";
 import ProductSize from "../ProductInformation/ProductSize/ProductSize";
@@ -9,6 +9,12 @@ import ProductCategory from "../ProductInformation/ProductCategory/ProductCatego
 
 import {COLOUR_LIST} from '../../components/Navigation/consts'
 
+/**
+ * Container component for each post.
+ *
+ * @param props Customer and product data
+ * @return {React.Element} The rendered element.
+ */
 const Container = (props) => {
     return (
         <>
@@ -30,11 +36,11 @@ const Container = (props) => {
                         </div>
 
                         <div className="col-sm">
-                            <ItemColour colour={props.colour}/>
+                            <ProductColour colour={props.colour}/>
                         </div>
 
                         <div className="col-sm">
-                            <Initials initials={props.customerInitials}/>
+                            <CustomerInitials initials={props.customerInitials}/>
                         </div>
                     </div>
                 </div>

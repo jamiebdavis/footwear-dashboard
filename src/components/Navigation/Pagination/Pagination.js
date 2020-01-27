@@ -1,8 +1,18 @@
 import React from 'react'
 import PageCount from "../PageCount/PageCount";
 import classes from './Pagination.module.css'
-import Dot from "../../UI/dot/dot";
+import Dot from "../../UI/dot/Dot";
 
+/**
+ * Pagination component.
+ *
+ * @param postsPerPage
+ * @param totalPosts
+ * @param paginate
+ * @param currentPage
+
+ * @return {React.Element} The rendered element.
+ */
 const Pagination = ({postsPerPage, totalPosts, paginate, currentPage}) => {
     const pageNumbers = [];
 
@@ -24,6 +34,6 @@ const Pagination = ({postsPerPage, totalPosts, paginate, currentPage}) => {
                 totalPages={pageNumbers.length}/>
         </nav>
     )
-}
+};
 
 export default Pagination;

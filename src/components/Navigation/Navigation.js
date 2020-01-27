@@ -3,6 +3,15 @@ import classes from "./Navigation.module.css"
 import NavigationItem from "./NavigationItem/NavigationItem";
 import {STATUS_COUNT} from './consts'
 
+/**
+ * Navigation component.
+ *
+ * @param clearFilter function
+ * @param filter Posts function
+ * @param filter Are the posts filtered.
+ *
+ * @return {React.Element} The rendered element.
+ */
 const Navigation = ({clearFilter, filterPosts, filter}) => {
     const elements = [];
 
