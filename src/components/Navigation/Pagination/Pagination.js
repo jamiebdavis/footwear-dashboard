@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import classes from './Pagination.module.css'
 
 import PageCount from "../PageCount/PageCount";
@@ -25,7 +25,10 @@ const Pagination = ({postsPerPage, totalPosts, paginate, currentPage}) => {
         <>
             <ul className={classes.Navigation}>
                 {pageNumbers.map(number => (
-                    <li><a className={classes.Link} onClick={() => paginate(number)}>
+                    <li key={number}><a
+                        className={classes.Link}
+                        onClick={() => paginate(number)}
+                    >
                         <Dot active={number === currentPage}/>
                     </a></li>
 

@@ -10,7 +10,7 @@ export const StatusContext = createContext();
  * @return {React.Element} The rendered element.
  */
 const StatusContextProvider = (props) => {
-        const [statusInfo, setStatusInfo] = useState([
+        const [statusInfo] = useState([
             {
                 id: '0',
                 colour: '#28dec9',

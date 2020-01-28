@@ -7,13 +7,13 @@ import NavigationItem from "./NavigationItem/NavigationItem";
  * Navigation component.
  *
  * @param clearFilter function
- * @param filter Posts function
+ * @param filterPosts Posts function
  * @param filter Are the posts filtered.
  *
  * @return {React.Element} The rendered element.
  */
 const Navigation = ({clearFilter, filterPosts, filter}) => {
-    const [statusCount, setColourList] = useState(4);
+    const [statusCount] = useState(4);
     const elements = [];
 
     const clearFilterElement = <li className={classes.clearFilter} onClick={clearFilter}>clear filter</li>

@@ -89,9 +89,8 @@ const App = () => {
 
     const postList = posts.slice(indexOfFirstPost, indexOfLastPost).map(post => {
         return (
-            <div onClick={() => deletePost(post.id)}>
+            <div onClick={() => deletePost(post.id)} key={post.id}>
                 <Container
-                    key={post.id}
                     productName={post.productName}
                     category={post.category}
                     size={post.size}
@@ -106,9 +105,8 @@ const App = () => {
 
     const filteredPostList = filteredPosts.slice(indexOfFirstPost, indexOfLastPost).map(post => {
         return (
-            <div onClick={() => deletePost(post.id)}>
+            <div onClick={() => deletePost(post.id)} key={post.id}>
                 <Container
-                    key={post.id}
                     productName={post.productName}
                     category={post.category}
                     size={post.size}

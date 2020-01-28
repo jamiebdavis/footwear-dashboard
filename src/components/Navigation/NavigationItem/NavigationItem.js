@@ -10,14 +10,14 @@ import classes from "../Navigation.module.css";
  * @return {React.Element} The rendered element.
  */
 const NavigationItem = ({value, filterPosts}) => {
-    const [colourList, setColourList] = useState([
+    const [colourList] = useState([
         '#28dec9',
         '#66c0ed',
         '#e07a14',
         '#c92f1e'
     ]);
 
-    const [statusDescription, setStatusDescription] = useState([
+    const [statusDescription] = useState([
         'Ready to try',
         'On the way',
         'In the queue',
