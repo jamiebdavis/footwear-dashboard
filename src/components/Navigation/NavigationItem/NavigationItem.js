@@ -19,7 +19,7 @@ const NavigationItem = ({value, filterPosts}) => {
         >
             <span
                 style={{backgroundColor: COLOUR_LIST[value], position: "relative", right: "5px"}}
-                className={classes.outOfStock}></span>
+                className={classes.outOfStock}> </span>
 
             {CUSTOMER_STATUS_TYPES[value]}
         </li>

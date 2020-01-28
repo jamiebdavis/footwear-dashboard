@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import Pagination from "./components/Navigation/Pagination/Pagination";
 
-import MOCK_DATA from "./data/data";
+import Pagination from "./components/Navigation/Pagination/Pagination";
 import Navigation from "./components/Navigation/Navigation";
 import Container from "./components/Container/Container";
+
+import MOCK_DATA from "./data/data";
+
 
 const App = () => {
     const [posts, setPosts] = useState([]);
@@ -12,13 +14,15 @@ const App = () => {
     const [filteredPosts, setFilteredPosts] = useState([]);
     const [postsPerPage, setPostsPerPage] = useState(4);
     const [currentPage, setCurrentPage] = useState(0);
-
-
-
+    const [totalPages, setTotalPages] = useState(0);
 
     useEffect(() => {
         setPosts(MOCK_DATA);
     }, []);
+
+
+
+
 
     //  Get currents posts
     const indexOfLastPost = currentPage + postsPerPage;
@@ -85,17 +89,14 @@ const App = () => {
     });
 
     return (
-        <div className="container mt-2" style={{minWidth: "800px"}}>
-            {/*<Slider/>*/}
+        <div className="container mt-2">
+
             <Navigation
                 filterPosts={filterPosts}
                 filter={filter}
                 clearFilter={clearFilter}/>
 
-            {/*    work on no more posts*/}
-
-            {filter ? filteredPostList : postList}
-
+            {posts.length > 0 ? filter ? filteredPostList : postList : <p>No more posts...</p>}
 
             <Pagination
                 postsPerPage={postsPerPage}
@@ -103,7 +104,6 @@ const App = () => {
                 paginate={paginate}
                 currentPage={currentPage}
             />
-
 
         </div>
     )

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import PageCount from "../PageCount/PageCount";
 import classes from './Pagination.module.css'
 import Dot from "../../UI/dot/Dot";
@@ -19,6 +19,15 @@ const Pagination = ({postsPerPage, totalPosts, paginate, currentPage}) => {
     for (let i = 0; i < Math.ceil(totalPosts / postsPerPage); i++) {
         pageNumbers.push(i)
     }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            paginate(pageNumbers.length === currentPage ? 0 : currentPage + 1);
+            console.log("paginate ++ ")
+        }, 3000);
+        return () => clearInterval(interval);
+    }, [currentPage]);
+
     return (
         <nav>
             <ul className={classes.Navigation}>
