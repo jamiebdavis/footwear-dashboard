@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from "./Navigation.module.css"
+
 import NavigationItem from "./NavigationItem/NavigationItem";
-import {STATUS_COUNT} from './consts'
 
 /**
  * Navigation component.
@@ -13,11 +13,12 @@ import {STATUS_COUNT} from './consts'
  * @return {React.Element} The rendered element.
  */
 const Navigation = ({clearFilter, filterPosts, filter}) => {
+    const [statusCount, setColourList] = useState(4);
     const elements = [];
 
     const clearFilterElement = <li className={classes.clearFilter} onClick={clearFilter}>clear filter</li>
 
-    for (let i = 0; i < STATUS_COUNT; i++) {
+    for (let i = 0; i < statusCount; i++) {
         elements.push(<NavigationItem
                 key={i}
                 value={i}

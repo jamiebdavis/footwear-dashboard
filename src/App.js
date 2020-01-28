@@ -7,21 +7,38 @@ import Container from "./components/Container/Container";
 
 import MOCK_DATA from "./data/data";
 
+// Initial Number of Posts
+let pageCount = 5;
 
 const App = () => {
     const [posts, setPosts] = useState([]);
     const [filter, setFilter] = useState(false);
     const [filteredPosts, setFilteredPosts] = useState([]);
-    const [postsPerPage, setPostsPerPage] = useState(4);
+    const [postsPerPage] = useState(4);
     const [currentPage, setCurrentPage] = useState(0);
-    const [totalPages, setTotalPages] = useState(0);
+
+    //  Auto rotate time
+    const [timer] = useState(10000);
 
     useEffect(() => {
         setPosts(MOCK_DATA);
     }, []);
 
+    //  Work out total number of pages
+    useEffect(() => {
+        pageCount = Math.ceil((posts.length / postsPerPage));
+    }, [posts]);
 
+    //  Auto Rotate interval
+    useEffect(() => {
 
+        if (!filter) {
+            const interval = setInterval(() => {
+                setCurrentPage(currentPage === pageCount - 1 ? 0 : currentPage + 1)
+            }, timer);
+            return () => clearInterval(interval);
+        }
+    }, [currentPage, filter]);
 
 
     //  Get currents posts
@@ -29,9 +46,9 @@ const App = () => {
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
 
     /**
-     * Remove post from screen when clicked
+     * Remove post from screen when clicked.
      *
-     * @param {String} id Post ID.
+     * @param id Post ID.
      */
     const deletePost = (id) => {
         const postsArr = posts.filter((post) => post.id !== id);
@@ -41,17 +58,33 @@ const App = () => {
         setFilteredPosts(filteredPostsArr);
     };
 
+    /**
+     * Filter post via status.
+     *
+     * @param status Customer status.
+     */
     const filterPosts = (status) => {
         const postsArr = posts.filter((post) => post.status.id === status);
         setFilter(true);
+        setCurrentPage(0);
         setFilteredPosts(postsArr);
+
     };
 
+    /**
+     * Clear current filter, restoring original posts.
+     */
     const clearFilter = () => {
         setFilter(false);
+        setCurrentPage(0);
+        paginate(0);
     };
 
-    //Change page
+    /**
+     * Change current page.
+     *
+     * @param {Number} pageNumber
+     */
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     const postList = posts.slice(indexOfFirstPost, indexOfLastPost).map(post => {
@@ -90,11 +123,11 @@ const App = () => {
 
     return (
         <div className="container mt-2">
-
             <Navigation
                 filterPosts={filterPosts}
                 filter={filter}
-                clearFilter={clearFilter}/>
+                clearFilter={clearFilter}
+                setCurrentPage={setCurrentPage}/>
 
             {posts.length > 0 ? filter ? filteredPostList : postList : <p>No more posts...</p>}
 
@@ -104,7 +137,6 @@ const App = () => {
                 paginate={paginate}
                 currentPage={currentPage}
             />
-
         </div>
     )
 };

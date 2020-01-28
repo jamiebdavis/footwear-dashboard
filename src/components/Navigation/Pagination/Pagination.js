@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
-import PageCount from "../PageCount/PageCount";
 import classes from './Pagination.module.css'
+
+import PageCount from "../PageCount/PageCount";
 import Dot from "../../UI/dot/Dot";
 
 /**
@@ -20,16 +21,8 @@ const Pagination = ({postsPerPage, totalPosts, paginate, currentPage}) => {
         pageNumbers.push(i)
     }
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            paginate(pageNumbers.length === currentPage ? 0 : currentPage + 1);
-            console.log("paginate ++ ")
-        }, 3000);
-        return () => clearInterval(interval);
-    }, [currentPage]);
-
     return (
-        <nav>
+        <>
             <ul className={classes.Navigation}>
                 {pageNumbers.map(number => (
                     <li><a className={classes.Link} onClick={() => paginate(number)}>
@@ -41,7 +34,7 @@ const Pagination = ({postsPerPage, totalPosts, paginate, currentPage}) => {
             <PageCount
                 currentPage={currentPage}
                 totalPages={pageNumbers.length}/>
-        </nav>
+        </>
     )
 };
 
